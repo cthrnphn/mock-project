@@ -14,117 +14,113 @@
   <title>Web Development Change Request Form</title>
 </head>
 
-<body>
-  <!-- Form code begins -->
-  <form class="needs-validation" id="postData" novalidate>
-    <!-- Input name -->
-    <div class="form-group">
-      <label for="inputName">Full name</label>
-      <input type="text" class="form-control" name="name" id="inputName" required>
-      <div class="valid-feedback">
-        Well, hi there!
+<body class="bg-light">
+  <div class="container">
+    <div class="py-5 text-center">
+      <a href="https://www.phoenix.edu"><img class="d-block mx-auto mb-4"
+          src="https://www.phoenix.edu/content/dam/uopx/img/homepage/UOP_logo.png"
+          alt="Go to University of Phoenix homepage."></a>
+      <h2>Web Development Change Request Form</h2>
+      <p class="lead">Please fill out the following form to request changes to the University of Phoenix website or add
+        new content additions to the site.</p>
+    </div>
+    <!-- Form code begins -->
+    <form class="needs-validation" id="postData" novalidate>
+      <h4 class="mb-3">Your information</h4>
+      <!-- Input name -->
+      <div class="form-group">
+        <label for="inputName">Full name</label>
+        <input type="text" class="form-control" name="name" id="inputName" required>
+        <div class="invalid-feedback">Please enter your full name.</div>
       </div>
-      <div class="invalid-feedback">Please enter your full name.</div>
-    </div>
-    <!-- Input email -->
-    <div class="form-group">
-      <label for="inputEmail">Email address</label>
-      <input type="email" class="form-control" name="email" id="inputEmail" required>
-      <div class="valid-feedback">
-        Looks good!
+      <!-- Input email -->
+      <div class="form-group">
+        <label for="inputEmail">Email address</label>
+        <input type="email" class="form-control" name="email" id="inputEmail" required>
+        <div class="invalid-feedback">Please enter a valid e-mail address.</div>
       </div>
-      <div class="invalid-feedback">Please enter a valid e-mail address.</div>
-    </div>
-    <!-- Input department -->
-    <div class="form-group">
-      <label for="selectDept">Department</label>
-      <select class="custom-select" name="department" id="selectDept" required>
-        <option value="">Choose...</option>
-        <option>School of Business</option>
-        <option>College of Education</option>
-        <option>College of Health Professions</option>
-        <option>School of Nursing</option>
-        <option>School of Health Services Administration</option>
-        <option>College of Humanities and Sciences</option>
-        <option>College of Information Systems and Technology</option>
-        <option>School of Advanced Studies</option>
-        <option>School of Continuing Education</option>
-      </select>
-      <div class="valid-feedback">
-        Great choice.
+      <!-- Input department -->
+      <div class="form-group">
+        <label for="selectDept">Department</label>
+        <select class="custom-select" name="department" id="selectDept" required>
+          <option value="">Choose...</option>
+          <option>School of Business</option>
+          <option>College of Education</option>
+          <option>College of Health Professions</option>
+          <option>School of Nursing</option>
+          <option>School of Health Services Administration</option>
+          <option>College of Humanities and Sciences</option>
+          <option>College of Information Systems and Technology</option>
+          <option>School of Advanced Studies</option>
+          <option>School of Continuing Education</option>
+        </select>
+
+        <div class="invalid-feedback">Please select your department.</div>
       </div>
-      <div class="invalid-feedback">Please select your department.</div>
-    </div>
-    <!-- Input change type -->
-    <label>Type of change</label>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="radios" id="optionsRadios1" value="chgContent" checked>
-        Change existing content
-      </label>
-    </div>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="radios" id="optionsRadios2" value="addContent">
-        Add new content
-      </label>
-    </div>
-    <!-- Input date -->
-    <div class="form-group">
-      <label for="datepicker">Preferred due date</label>
-      <input type="text" class="form-control" name="duedate" id="datepicker" placeholder="mm/dd/yyyy" required>
-      <div class="valid-feedback">
-        Awesome.
+      <h4 class="mb-3">Change request</h4>
+      <!-- Input change type -->
+      <label>Type of change</label>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="radios" id="optionsRadios1" value="chgContent" checked>
+          Change existing content
+        </label>
       </div>
-      <div class="invalid-feedback">Please choose a preferred due date.</div>
-    </div>
-    <!-- Input priority -->
-    <div class="form-group">
-      <label for="selectPriority">Priority level</label>
-      <select multiple class="form-control" name="priority" id="selectPriority" required>
-        <option selected>Low</option>
-        <option>Medium</option>
-        <option>High</option>
-        <option>Critical</option>
-      </select>
-      <div class="valid-feedback">
-        Duly noted.
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="radios" id="optionsRadios2" value="addContent">
+          Add new content
+        </label>
       </div>
-      <div class="invalid-feedback">Please select a request priority.</div>
-    </div>
-    <!-- Input URL -->
-    <div class="form-group">
-      <label for="inputURL">Page URL</label>
-      <input type="text" class="form-control" name="url" id="inputURL"
-        placeholder="e.g. https://www.phoenix.edu/degrees/technology/information-systems.html" required>
-      <small id="urlHelp" class="form-text text-muted"> Enter the complete URL of the page that should be edited.
-      </small>
-      <div class="valid-feedback">
-        Cool!
+      <!-- Input date -->
+      <div class="form-group">
+        <label for="datepicker">Preferred due date</label>
+        <input type="text" class="form-control" name="duedate" id="datepicker" placeholder="mm/dd/yyyy" required>
+        <div class="invalid-feedback">Please choose a preferred due date.</div>
       </div>
-      <div class="invalid-feedback">Please enter a URL.</div>
-    </div>
-    <!-- Input content change -->
-    <div class="form-group">
-      <label for="formControlTextarea1">Content addition/change</label>
-      <textarea class="form-control" name="content" id="formControlTextarea1" rows="3" required></textarea>
-      <small id="changeHelp" class="form-text text-muted">Describe in detail the change being requested.</small>
-      <div class="valid-feedback">
-        Much appreciated.
+      <!-- Input priority -->
+      <div class="form-group">
+        <label for="selectPriority">Priority level</label>
+        <select multiple class="form-control" name="priority" id="selectPriority" required>
+          <option selected>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+          <option>Critical</option>
+        </select>
+        <div class="invalid-feedback">Please select a request priority.</div>
       </div>
-      <div class="invalid-feedback">Please give us some information.</div>
-    </div>
-    <!-- Input file -->
-    <div class="form-group">
-      <label for="inputFile">Attach file(s)</label>
-      <input type="file" class="form-control-file" name="file" id="inputFile">
-      <small id="fileHelp" class="form-text text-muted">Please include any document(s) needed for change
-        request (this is optional).</small>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-    <p></p>
-  </form>
-  <!-- Form code ends -->
+      <!-- Input URL -->
+      <div class="form-group">
+        <label for="inputURL">Page URL</label>
+        <input type="url" class="form-control" name="url" id="inputURL"
+          placeholder="e.g. https://www.phoenix.edu/degrees/technology/information-systems.html" required>
+        <small id="urlHelp" class="form-text text-muted"> Enter the complete URL of the page that should be edited.
+        </small>
+        <div class="invalid-feedback">Please enter a valid URL.</div>
+      </div>
+      <!-- Input content change -->
+      <div class="form-group">
+        <label for="formControlTextarea1">Content addition/change</label>
+        <textarea class="form-control" name="content" id="formControlTextarea1" rows="3" required></textarea>
+        <small id="changeHelp" class="form-text text-muted">Describe in detail the change being requested.</small>
+        <div class="invalid-feedback">Please give us some information.</div>
+      </div>
+      <!-- Input file -->
+      <div class="form-group">
+        <label for="inputFile">Attach file(s)</label>
+        <input type="file" class="form-control-file" name="file" id="inputFile">
+        <small id="fileHelp" class="form-text text-muted">Please include any document(s) needed for change
+          request (this is optional).</small>
+      </div>
+      <hr class="mb-4">
+      <button class="btn btn-primary btn-lg btn-block"
+        style="background-color: #de3518; color: #fff; border: 3px solid #de3518;" type="submit">Submit</button>
+    </form>
+  </div>
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2019 Catherine Phan</p>
+  </footer>
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -165,7 +161,6 @@
       }, false);
     })();
   </script>
-  <!-- Serialize form data on click -->
   <!-- Post resource to JSONPlaceholder-->
   <script>document.getElementById('postData').addEventListener('submit', postData);
 
